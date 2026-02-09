@@ -27,5 +27,13 @@ faith, trust, and choosing each other even when life pulls apart.
 
 <a href="memories.html" class="btn">Our Memories 📸</a>
 
+<script>
+window.onload = function () {
+  if (localStorage.getItem("musicPlaying") === "yes") {
+    document.getElementById("bgMusic").play();
+  }
+};
+</script>
+  
 </body>
 </html>
