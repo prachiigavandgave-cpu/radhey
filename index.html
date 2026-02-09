@@ -6,10 +6,10 @@
 </head>
 <body>
 
-<audio id="bgmusic" loop>
-  <source src="music/flute.mp3" type="audio/mpeg">
-</audio>
+<audio id="bgMusic" src="music/flute.mp3" loop></audio>
 
+<button onclick="playMusic()">🎵 Play Music</button>
+  
 <button onclick="document.getElementById('bgmusic').play()" class="btn">
 ▶ Play Music 🎶
 </button>
@@ -20,5 +20,19 @@
   <a href="promise.html" class="btn">Begin Our Promise 💛</a>
 </div>
 
+ <script>
+function playMusic() {
+  const music = document.getElementById("bgMusic");
+  music.play();
+  localStorage.setItem("musicPlaying", "yes");
+}
+
+window.onload = function () {
+  if (localStorage.getItem("musicPlaying") === "yes") {
+    document.getElementById("bgMusic").play();
+  }
+};
+</script>
+  
 </body>
 </html>
