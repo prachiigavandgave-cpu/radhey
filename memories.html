@@ -20,5 +20,13 @@ soft, calming, unforgettable.
 
 <a href="letter.html" class="btn">One Hidden Letter 💌</a>
 
+  <script>
+window.onload = function () {
+  if (localStorage.getItem("musicPlaying") === "yes") {
+    document.getElementById("bgMusic").play();
+  }
+};
+  </script>
+
 </body>
 </html>
